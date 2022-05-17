@@ -26,6 +26,7 @@ namespace ApprovalTests
     {
         originalFileName = file;
         fileName = file.empty() ? handleBoostQuirks() : findFileName(file);
+        fileName = Path::normalizeSeparators ( fileName );
     }
 
     std::string TestName::findFileName(const std::string& file)
